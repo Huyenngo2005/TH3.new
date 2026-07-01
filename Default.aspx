@@ -1,18 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AppBWeb.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AppAWeb.Default" Async="true"%>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>AppB - Server</title>
+    <title>AppA - Client</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <h2>AppB - Server</h2>
-            <asp:Label ID="lblInfo" runat="server" Text="Chưa có dữ liệu từ Client" Font-Bold="true" /><br /><br />             
-            <asp:Label ID="lblReceived" runat="server" /><br /><br />
-            Phản hồi: <asp:TextBox ID="txtFeedback" runat="server" Width="300px" /><br /><br />
-            <asp:Button ID="btnSendBack" runat="server" Text="Gửi phản hồi về AppA" OnClick="btnSendBack_Click" /><br /><br />                        
-            <asp:Label ID="lblStatus" runat="server" ForeColor="Green" /> 
+            <h2>AppA - Client</h2>
+            Tên sản phẩm: <asp:TextBox ID="txtName" runat="server" /><br /><br />
+            Giá: <asp:TextBox ID="txtPrice" runat="server" TextMode="Number" /><br /><br />              
+            <asp:Button ID="btnSend" runat="server" Text="Gửi sang AppB" OnClick="btnSend_Click" /><br /><br />                        
+            <asp:Label ID="lblResult" runat="server" Font-Bold="true" ForeColor="Blue" />
         </div>
     </form>
 </body>
